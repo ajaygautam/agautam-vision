@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: agautam-vision-deploy
+  labels:
+    app: agautam-vision
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: agautam-vision
+  template:
+    metadata:
+      labels:
+        app: agautam-vision
+    spec:
+      containers:
+        - name: agautam-vision
+          image: agautam-vision:latest

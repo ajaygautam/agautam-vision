@@ -1,0 +1,7 @@
+kind: Deployment
+apiVersion: v1
+metadata:
+  name: agautam-vision-service
+spec:
+  selector:
+    app: agautam-vision
