@@ -1,7 +1,10 @@
-kind: Deployment
+kind: Service
 apiVersion: v1
 metadata:
-  name: agautam-vision-service
+  name: agautam-vision
 spec:
+  ports:
+  - port:80
+    targetPort: 80
   selector:
     app: agautam-vision
